@@ -1,0 +1,71 @@
+{
+    "name": "Curso de Cucumber Java",
+    "dockerComposeFile": ["../docker-compose.yml", "docker-compose.yml"],
+    "service": "app",
+    "workspaceFolder": "/app",
+    "features": {
+      "ghcr.io/devcontainers/features/common-utils:2": {
+        "installZsh": true,
+        "configureZshAsDefaultShell": true,
+        "installOhMyZsh": true,
+        "installOhMyZshConfig": true,
+        "upgradePackages": true
+      },
+      "ghcr.io/devcontainers-contrib/features/zsh-plugins:0": {
+        "plugins": "ssh-agent npm",
+        "omzPlugins": "https://github.com/zsh-users/zsh-autosuggestions",
+        "username": "root"
+      },
+      "ghcr.io/stuartleeks/dev-container-features/shell-history:0": {}
+    },
+    "customizations": {
+      "vscode": {
+        "extensions": [
+          "redhat.java",
+          "vscjava.vscode-java-pack",
+          "tabnine.tabnine-vscode",
+          "ms-azuretools.vscode-docker",
+          "vscjava.vscode-gradle",
+          "eamodio.gitlens",
+          "mhutchie.git-graph",
+          "usernamehw.errorlens",
+          "jebbs.plantuml",
+          "qhoekman.language-plantuml",
+          "vmware.vscode-boot-dev-pack",
+          "loiane.java-spring-extension-pack",
+          "oracle.oracle-java",
+          "symflower.symflower",
+          "guilhermestella.guilhermestella-java-ext",
+          "george-alisson.html-preview-vscode",
+          "alexkrechik.cucumberautocomplete",
+          "stevejpurves.cucumber",
+          "Blodwynn.featurehighlight",
+          "siarheikuchuk.gherkin-beautifier-vs-code-plugin",
+          "AravindKumar.gherkin-indent",
+          "CucumberOpen.cucumber-official",
+          "AbhinabaGhosh.cucumberquick"
+        ],
+        "settings": {
+          "terminal.integrated.defaultProfile.linux": "zsh",
+          "terminal.integrated.shell.linux": "/bin/zsh",
+          "terminal.integrated.profiles.linux": {
+            "zsh": {
+              "path": "/bin/zsh"
+            }
+          },
+          "java.jdt.ls.java.home": "/usr/local/openjdk-18",
+          "java.maven.downloadSources": true,
+          "maven.terminal.useJavaHome": true,
+          "java.configuration.runtimes": [
+            {
+              "name": "JavaSE-18",
+              "path": "/usr/local/openjdk-18",
+              "default": true
+            }
+          ]
+        }
+      }
+    },
+    "remoteUser": "root"
+  }
+  

@@ -1,0 +1,12 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: cursocucumber-java-image:latest
+    container_name: cursocucumber-java
+    volumes:
+      - .:/app
+    environment:
+      - JAVA_OPTS=-Xms512m -Xmx1024m
+
