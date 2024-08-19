@@ -43,16 +43,37 @@
           "siarheikuchuk.gherkin-beautifier-vs-code-plugin",
           "AravindKumar.gherkin-indent",
           "CucumberOpen.cucumber-official",
-          "AbhinabaGhosh.cucumberquick"
+          "AbhinabaGhosh.cucumberquick",
+          "vscjava.vscode-lombok"
         ],
         "settings": {
+	        "maven.executable.path": "/usr/bin/mvn",
           "terminal.integrated.defaultProfile.linux": "zsh",
           "terminal.integrated.shell.linux": "/bin/zsh",
           "terminal.integrated.profiles.linux": {
-            "zsh": {
-              "path": "/bin/zsh"
+            "bash": {
+            "path": "bash",
+            "env": {
+              "JAVA_HOME": "/usr/local/openjdk-18"
             }
           },
+            "zsh": {
+            "path": "/bin/zsh",
+            "env": {
+              "JAVA_HOME": "/usr/local/openjdk-18"
+            }
+        },
+        "JavaSE-18": {
+          "overrideName": true,
+          "env": {
+            "JAVA_HOME": "/usr/local/openjdk-18"
+          },
+          "path": "bash",
+          "args": [
+            "--rcfile",
+            "/home/bieniek/.vscode-server/data/User/globalStorage/pleiades.java-extension-pack-jdk/.bashrc"
+          ]
+          }},
           "java.jdt.ls.java.home": "/usr/local/openjdk-18",
           "java.maven.downloadSources": true,
           "maven.terminal.useJavaHome": true,
@@ -66,6 +87,7 @@
         }
       }
     },
-    "remoteUser": "root"
+    "remoteUser": "root",
+    "postCreateCommand": "echo 'export JAVA_HOME=/usr/local/openjdk-18' >> ~/.zshrc && /bin/zsh -c 'source ~/.zshrc'"
   }
   

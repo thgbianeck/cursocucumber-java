@@ -37,3 +37,8 @@ target/
 
 # Configurações específicas do Maven
 .mvn/
+.classpath
+.project
+.settings/*
+target/*
+/target/
